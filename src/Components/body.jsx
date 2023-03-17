@@ -4,21 +4,24 @@ import "../styles/main.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import { TiBrush } from 'react-icons/ti';
 import { FiSettings } from 'react-icons/fi';
-import { MdWeb } from 'react-icons/md';
+import { BsGlobe2 } from 'react-icons/bs';
 
 function Body() {
   const BodyRef = useRef();
 
   return (
     <section>
-      <Container>
+       
+      <Container style={{marginBottom: '15%'}}>
         <Row>
+        <p className="centered-text">From branding to content creation</p>
+        <h1 className="tagline-2"> I can help </h1>
           <Col md={4}>
             <div className="card  text-white rounded">
               <div className="card-body">
-              <MdWeb size={90}
+              <BsGlobe2 size={90}
         style={{
-          color: '#361C29',
+          color: '#FF097F',
           backgroundColor: '#361C29',
           borderRadius: '50%',
           padding: '20px'
@@ -53,7 +56,7 @@ function Body() {
               </div>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={4} >
             <div className="card text-white rounded">
               <div className="card-body">
               <FiSettings size={90}
@@ -76,7 +79,9 @@ function Body() {
         </Row>
       </Container>
     </section>
+   
   );
+  
 }
 
 export default Body;

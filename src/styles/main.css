@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap'); */
+
 *{
     padding: 0;
     margin: 0;
@@ -18,6 +20,11 @@
 }
 
 header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +34,20 @@ header{
     color: var(--textColor);
     z-index: 1;
 }
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 999;
+    background-image: linear-gradient(-225deg,
+    #231557 20%,
+    #ff1361 67%,
+    #ef6d35 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
 
 nav a{
     margin: 0 2rem;
@@ -39,6 +60,11 @@ nav {
 }
 nav a:hover {
     color: var(--secondaryColor);
+}
+
+.portfolio{
+height: 50%;
+margin: 2% 0% 2% 0%;
 }
 
 header .nav-btn{
@@ -71,6 +97,26 @@ header .nav-btn{
   .col-md-4 {
     flex: 1;
   }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; Adjust the height to match your needs */
+    background-color: black; /* Set the background color to black */
+  }
+  
+  .centered-text {
+    text-align: center;
+    color: white; /* Set the font color to white */
+  }
+  .tagline-2{
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif; /* Use the font name here */
+    font-weight: 900;
+    color: white;
+    text-align: center;
+  }
+  
   
   .card {
     height: 100%;

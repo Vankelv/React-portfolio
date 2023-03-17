@@ -27,6 +27,10 @@
   padding: 2rem;
   position: relative;
 }
+.sub-text{
+  font-size: 40px;
+  color: white;
+}
 
 .animate-charcter {
   background-image: linear-gradient(-225deg,

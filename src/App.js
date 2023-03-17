@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "./Components/navbar";
 import Body from "./Components/body";
 import HeroSection from "./Components/HeroSection";
+import Portfolio from "./Components/Portfolio";
+import './navSticky.js';
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
     <Navbar/>
     <HeroSection/>
     <Body/>
+    <Portfolio/>
     </React.Fragment>
     </div>
   );
