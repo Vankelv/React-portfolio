@@ -11,23 +11,25 @@ function Body() {
 
   return (
     <section>
-       
-      <Container style={{marginBottom: '15%'}}>
+
+      <Container style={{ marginBottom: '8%' }}>
         <Row>
-        <p className="centered-text">From branding to content creation</p>
-        <h1 className="tagline-2"> I can help </h1>
+          <span className="centered-text">From branding to content creation</span>
+          <h1 className="tagline-2"> I can help </h1>
           <Col md={4}>
             <div className="card  text-white rounded">
               <div className="card-body">
-              <BsGlobe2 size={90}
-        style={{
-          color: '#FF097F',
-          backgroundColor: '#361C29',
-          borderRadius: '50%',
-          padding: '20px'
-        }}/> 
-                <h1 className="card-title">Website Design and Development</h1>
-                <ul>
+              <div className="d-flex justify-content-center align-items-center">
+                <BsGlobe2 size={90}
+                  style={{
+                    color: '#FF097F',
+                    backgroundColor: '#361C29',
+                    borderRadius: '50%',
+                    padding: '20px'
+                  }} />
+                  </div>
+                <h1 className="card-title">Website Dev</h1>
+                <ul className="items-list">
                   <li>Custom website design</li>
                   <li>Responsive design</li>
                   <li>Website development</li>
@@ -39,15 +41,17 @@ function Body() {
           <Col md={4}>
             <div className="card  text-white rounded">
               <div className="card-body">
-              <TiBrush   size={90}
-        style={{
-          color: '#7BD388',
-          backgroundColor: '#1C2C1F',
-          borderRadius: '50%',
-          padding: '20px'
-        }}/>
-                <h1 className="card-title"> Brand Identity Design</h1>
-                <ul>
+              <div className="d-flex justify-content-center align-items-center">
+                <TiBrush size={90}
+                  style={{
+                    color: '#7BD388',
+                    backgroundColor: '#1C2C1F',
+                    borderRadius: '50%',
+                    padding: '20px'
+                  }} />
+                  </div>
+                <h1 className="card-title"> Branding</h1>
+                <ul className="items-list">
                   <li>Logo design</li>
                   <li>Business card design</li>
                   <li>Creative social media posts</li>
@@ -59,15 +63,19 @@ function Body() {
           <Col md={4} >
             <div className="card text-white rounded">
               <div className="card-body">
-              <FiSettings size={90}
-        style={{
-          color: '#7979F1',
-          backgroundColor: '#252543',
-          borderRadius: '50%',
-          padding: '20px'
-        }}/>
+                <div className="d-flex justify-content-center align-items-center">
+                  <FiSettings size={90}
+                    style={{
+                      color: '#7979F1',
+                      backgroundColor: '#252543',
+                      borderRadius: '50%',
+                      padding: '20px',
+                      padding: '25px',
+
+                    }} />
+                </div>
                 <h1 className="card-title"> IT Support</h1>
-                <ul>
+                <ul className="items-list">
                   <li>Computer troubleshooting</li>
                   <li>Software installation</li>
                   <li>Network setup and configuration</li>
@@ -79,9 +87,9 @@ function Body() {
         </Row>
       </Container>
     </section>
-   
+
   );
-  
+
 }
 
 export default Body;

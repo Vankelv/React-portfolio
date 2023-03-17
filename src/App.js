@@ -3,7 +3,8 @@ import Navbar from "./Components/navbar";
 import Body from "./Components/body";
 import HeroSection from "./Components/HeroSection";
 import Portfolio from "./Components/Portfolio";
-import './navSticky.js';
+import navSticky from './navSticky.js';
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <HeroSection/>
     <Body/>
     <Portfolio/>
+    <Footer/>
     </React.Fragment>
     </div>
   );

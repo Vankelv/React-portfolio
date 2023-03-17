@@ -12,10 +12,10 @@ const HeroSection = () => {
         <img className="van" src={vanImage} alt="Van" />
       </div>
       <div className="hero-text">
-        <h3 className="sub-text">Hello I'm</h3>
-        <h1 class="animate-charcter">Van Kelvin</h1>
-        <div class="string">
-          <h1 class="greeting en">Hello World!</h1>
+        <h3 className="sub-text">Hello <span style={{color:'#01BE96'}}>I am</span></h3>
+        <h1 className="animate-charcter">Van Kelvin</h1>
+        <div className="string">
+          <h2 >Relax i'll add a tailored details about me here</h2>
         </div>
       </div>
     </div>

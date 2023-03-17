@@ -1,161 +1,192 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif; */
 
- 
+
 }
 
-:root{
-    --mainColor: #000000;
-    --mainColorLight: #52619b;
-    --secondaryColor: #ca4f07;
-    --textColor: #ffffff; 
-    --bodyColor: rgb(36, 35, 35); 
-     cursor: url(../images/icons8-cursor-48.cur),auto;
+:root {
+  --mainColor: #000000;
+  --mainColorLight: #52619b;
+  --secondaryColor: #ca4f07;
+  --textColor: #ffffff;
+  --bodyColor: rgb(36, 35, 35);
+  cursor: url(../images/icons8-cursor-48.cur), auto;
+
 }
 
-header{
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 100;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    padding: 0 2rem;
-    background-color: var(--mainColor);
-    color: var(--textColor);
-    z-index: 1;
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  z-index: 1;
 }
+
 header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(-225deg,
+      #231557 20%,
+      #ff1361 67%,
+      #ef6d35 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+nav a {
+  margin: 0 2rem;
+  color: var(--textColor);
+  text-decoration: none;
+
+}
+
+nav {
+  border-radius: 15px;
+}
+
+nav a:hover {
+  color: var(--secondaryColor);
+}
+
+.portfolio {
+  height: 50%;
+  margin: 2% 0% 20% 0%;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+.nav-contact {
+  padding: 10px;
+  background: var(--bodyColor);
+  border: none;
+  border-radius: 5px;
+  color: var(--textColor);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-contact a:hover {
+  color: var(--secondaryColor);
+}
+
+.parent-container {
+  display: flex;
+}
+
+.col-md-4 {
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; Adjust the height to match your needs */
+  background-color: black;
+  /* Set the background color to black */
+}
+
+.centered-text{
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  /* Set the font color to white */
+}
+
+.tagline-2 {
+  font-family: 'Maven Pro', sans-serif ;
+  font-size: 92px;
+  line-height: 152px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+}
+.card-body{
+  font-family: 'Popins', sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+.items-list {
+  margin-left: 18%;
+}
+
+.card {
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.514);
+  border-radius: 5px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-items {
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav {
     position: fixed;
     top: 0;
     left: 0;
-    color: rgb(255, 255, 255);
+
     width: 100%;
-    z-index: 999;
-    background-image: linear-gradient(-225deg,
-    #231557 20%,
-    #ff1361 67%,
-    #ef6d35 100%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-
-nav a{
-    margin: 0 2rem;
-    color: var(--textColor);
-    text-decoration: none;
-    
-}
-nav {
-    border-radius: 15px;
-}
-nav a:hover {
-    color: var(--secondaryColor);
-}
-
-.portfolio{
-height: 50%;
-margin: 2% 0% 2% 0%;
-}
-
-header .nav-btn{
-    padding: 5px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--textColor);
-    visibility: hidden;
-    opacity: 0;
-    font-size: 1.8rem;
-}
-.nav-contact{
-    padding: 10px;
-    background: var(--bodyColor);
-    border: none;
-    border-radius: 5px;
-    color: var(--textColor);
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-}
-.nav-contact a:hover{
-    color: var(--secondaryColor);
-}
-.parent-container {
     display: flex;
-  }
-  
-  .col-md-4 {
-    flex: 1;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    /* height: 100vh; Adjust the height to match your needs */
-    background-color: black; /* Set the background color to black */
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    transform: translateY(-100vh);
   }
-  
-  .centered-text {
-    text-align: center;
-    color: white; /* Set the font color to white */
-  }
-  .tagline-2{
-    font-size: 3rem;
-    font-family: 'Poppins', sans-serif; /* Use the font name here */
-    font-weight: 900;
-    color: white;
-    text-align: center;
-  }
-  
-  
-  .card {
-    height: 100%;
-    background-color: rgba(22, 22, 22, 0.514);
-    border-radius: 5px;
-  }
-  
 
-@media only screen and (max-width: 1024px){
-    header .nav-btn{
-        visibility: visible;
-        opacity: 1;
-    }
-    header nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-     
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        background-color: var(--mainColor);
-        transition: 1s;
-        transform: translateY(-100vh);
-    }
+  header .responsive_nav {
+    transform: none;
+  }
 
-    header .responsive_nav{
-        transform: none;
-    }
-    
-    nav .nav-close-btn{
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-    }
-    nav a{
-        font-size: 1.5rem;
-    }
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
 }
