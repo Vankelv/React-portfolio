@@ -6,10 +6,10 @@ const Footer = () => {
   
   return (
     <div className="footer" style={{padding: '20px' }}>
-      <Row className="mx-auto align-items-center" 
+      <Row className="mx-auto text-white align-items-center" 
       style={{ height:'200px',
        marginBottom: 0, 
-       backgroundColor: '#EEFAF6', 
+       backgroundColor: '#101012', 
        width:'70%', 
        borderRadius: '10px', 
        boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)', 
