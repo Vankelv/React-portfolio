@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import LogoImage from '../images/Logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +16,7 @@ const Footer = () => {
        boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)', 
        }}>
         <Col xs={12} md={4} className="text-center">
-          <img src="path/to/your/logo.png" alt="Your logo" />
+          <img src={LogoImage} alt="Van logo" />
         </Col>
         <Col xs={12} md={4} className="text-center">
           <p>

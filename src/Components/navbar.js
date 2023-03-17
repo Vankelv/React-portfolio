@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from 'react-scroll';
+import { Row, Col } from 'react-bootstrap';
+import LogoImage from '../images/Logo.png';
 
 import "../styles/main.css"
 
@@ -13,7 +15,9 @@ function Navbar() {
 
     return (
         <header>
-            <h3>Logo</h3>
+            <Col xs={12} md={4} className="text-center">
+          <img src={LogoImage} alt="Van logo" />
+        </Col>
             <nav ref={navRef}>
                 <Link to="home" smooth={true} duration={500} onClick={() => showNavbar()}>Home</Link>
                 <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}>My work</Link>
