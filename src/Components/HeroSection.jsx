@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [textIndex, setTextIndex] = useState(0);
 
   return (
-    <section id="about">
+    <section id="home">
     <div className="hero-section">
       <div className="hero-image">
         <img className="van" src={vanImage} alt="Van" />

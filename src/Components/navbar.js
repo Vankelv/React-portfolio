@@ -16,7 +16,7 @@ function Navbar () {
             <h3>Logo</h3>
             <nav ref={navRef}>
                 <Link to="home" smooth={true} duration={500} onClick={() => showNavbar()}>Home</Link>
-                <Link to="portfolio" smooth={true} duration={500} onClick={() => showNavbar()}>My work</Link>
+                <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}>My work</Link>
                 <Link to="about" smooth={true} duration={500} onClick={() => showNavbar()}>About</Link>
                 <button className="nav-contact" ><a href = "/#">Contact me</a></button>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
