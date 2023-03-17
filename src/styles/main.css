@@ -4,8 +4,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: var(--bodyColor);
-    
+
+ 
 }
 
 :root{
@@ -14,6 +14,7 @@
     --secondaryColor: #ca4f07;
     --textColor: #ffffff; 
     --bodyColor: rgb(36, 35, 35); 
+     cursor: url(../images/icons8-cursor-48.cur),auto;
 }
 
 header{
@@ -63,7 +64,20 @@ header .nav-btn{
 .nav-contact a:hover{
     color: var(--secondaryColor);
 }
-
+.parent-container {
+    display: flex;
+  }
+  
+  .col-md-4 {
+    flex: 1;
+  }
+  
+  .card {
+    height: 100%;
+    background-color: rgba(22, 22, 22, 0.514);
+    border-radius: 5px;
+  }
+  
 
 @media only screen and (max-width: 1024px){
     header .nav-btn{
