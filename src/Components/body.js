@@ -10,11 +10,7 @@ function Body() {
   // }
   return (
     <body>
-      <section>
-        <div class="container-md">container</div>
-        <div class="container-md">container</div>
-        <div class="container-md">container</div>
-      </section>
+     
     </body>
   );
 }
