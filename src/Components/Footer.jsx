@@ -42,7 +42,7 @@ const Footer = () => {
         </Col>
       </Row>
       <div className="text-center" style={{ padding: '10px',color:'white', marginTop: '20px' }}>
-        &copy; {currentYear} Your Company Name. All rights reserved.
+        &copy; {currentYear} <a href='https://nextlinegh.com'>Nextline Gh.</a>  All rights reserved.
       </div>
     </div>
   );

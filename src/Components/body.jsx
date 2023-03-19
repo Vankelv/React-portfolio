@@ -14,14 +14,14 @@ function Body() {
 
   return (
     <div>
-       
-        <HeroSection />
+
+      <HeroSection />
       <section>
         <Container style={{ marginBottom: '8%' }}>
           <Row>
             <span className="centered-text">Helping You Create a Strong Digital Presence, from Branding to IT Support</span>
             <h1 className="tagline-2">Boosting Your Online Presence</h1>
-            <Col md={4}>
+            <Col md={4} className="col-sm-12">
               <div className="card  text-white rounded">
                 <div className="card-body">
                   <div className="d-flex justify-content-center align-items-center">
@@ -43,7 +43,7 @@ function Body() {
                 </div>
               </div>
             </Col>
-            <Col md={4}>
+            <Col md={4} className="col-sm-12">
               <div className="card  text-white rounded">
                 <div className="card-body">
                   <div className="d-flex justify-content-center align-items-center">
@@ -65,10 +65,11 @@ function Body() {
                 </div>
               </div>
             </Col>
-            <Col md={4} >
+            <Col md={4} className="col-sm-12">
               <div className="card text-white rounded">
                 <div className="card-body">
                   <div className="d-flex justify-content-center align-items-center">
+
                     <FiSettings size={90}
                       style={{
                         color: '#7979F1',
@@ -94,7 +95,7 @@ function Body() {
       </section>
       <AboutPage />
       <Porfolio />
-    
+
     </div>
 
   );

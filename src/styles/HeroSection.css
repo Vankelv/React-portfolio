@@ -91,15 +91,6 @@ h2 {
   z-index: 1;
 }
 
-
-.text-gradient {
-  background: linear-gradient(to right, #ff9900, #33cc33);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 @keyframes textGradient {
   0% {
     background-position: 0% 50%;

@@ -139,7 +139,12 @@ header .nav-btn {
 .items-list {
   margin-left: 18%;
 }
-
+a{
+  color: #fac760;
+}
+a:hover{
+  color: #ff1361;
+}
 .card {
   height: 100%;
   background-color: rgba(22, 22, 22, 0.514);
@@ -190,4 +195,111 @@ header .nav-btn {
   nav a {
     font-size: 1.5rem;
   }
+}
+/* portfolio */
+.tagline-2-p{
+  width: 40%;
+  margin: 0 auto;
+}
+
+
+/* About css */
+.skill-bars {
+  margin-bottom: 20px;
+}
+
+.skill-item {
+  margin-bottom: 10px;
+}
+
+.skill-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.skill-bar.animate .skill-progress {
+  width: var(--progress-width);
+  transition: width 1s ease-in-out;
+}
+
+.skill-bar {
+  height: 18px;
+
+  position: relative;
+  border: solid 2px #f7c561;
+  border-radius: 8px;
+}
+
+
+.skill-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  height: 100%;
+  background-color: #fac760;
+  animation: progress 2s ease-in-out forwards;
+  /* The animation above will animate the width property of the progress bar over 2 seconds */
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.skill-percent {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  font-weight: bold;
+}
+
+.about-buttons {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.about-buttons button {
+  margin: 10px;
+}
+
+@media (max-width: 767px) {
+  .about-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-buttons button {
+    margin: 5px 0;
+  }
+}
+p{
+  font-family: 'Poppins', 'Ubuntu', sans-serif;
+}
+.about.text-white{
+  background-color: #0B0B0B;
+
+  border-radius: 57px;
+}
+.btn.about{
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Poppins';
+  padding: 10px;
+  border: 1.5px solid #b6b4b4;
+  border-radius: 8px;
+}
+.btn.about:hover{
+  background-color: #e9e5e5 ;
+  color: #161515;
+  font-size: 18px;
+  font-family: 'Poppins';
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
 }

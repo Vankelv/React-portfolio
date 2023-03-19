@@ -14,7 +14,6 @@ const HeroSection = () => {
       <section style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
         <Row >
           <Col xs={12} md={6} >
-            {/* Hero section image */}
             <img
               src={vanImage}
               alt="Van"
