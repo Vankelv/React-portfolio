@@ -5,8 +5,8 @@ const TextSlider = () => {
   const [index, setIndex] = useState(0);
   const texts = [
     'I craft stunning websites with flawless functionality.',
-    'I design striking brand identities that leave a lasting impression.',
-    'I provide expert IT support to keep your systems running smoothly.'
+    'I design striking brand identities with lasting impression.',
+    'I offer expert IT support for smooth system performance.'
   ];
 
   const spring = useSpring({
@@ -18,14 +18,14 @@ const TextSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index + 1) % texts.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [index, texts.length]);
 
   return (
-    <animated.h3 style={{ color: 'white', ...spring }}>
+    <animated.h4 style={{ color: 'white', ...spring }}>
       {texts[index]}
-    </animated.h3>
+    </animated.h4>
   );
 };
 

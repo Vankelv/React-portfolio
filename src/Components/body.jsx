@@ -13,14 +13,13 @@ function Body() {
 
   return (
     <div>
+       
         <HeroSection />
-     
       <section>
-
         <Container style={{ marginBottom: '8%' }}>
           <Row>
-            <span className="centered-text">From branding to content creation</span>
-            <h1 className="tagline-2"> I can help </h1>
+            <span className="centered-text">Helping You Create a Strong Digital Presence, from Branding to IT Support</span>
+            <h1 className="tagline-2">Boosting Your Online Presence</h1>
             <Col md={4}>
               <div className="card  text-white rounded">
                 <div className="card-body">

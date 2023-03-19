@@ -28,11 +28,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
   padding: 0 2rem;
   background-color: var(--mainColor);
   color: var(--textColor);
-  z-index: 1;
 }
 
 header.sticky {
@@ -51,9 +49,12 @@ header.sticky {
 
 
 nav a {
-  margin: 0 2rem;
+  margin: 0 10px;
   color: var(--textColor);
   text-decoration: none;
+  font-family: 'Maven pro', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 
 }
 
@@ -115,16 +116,16 @@ header .nav-btn {
 
 .centered-text{
   text-align: center;
-  color: white;
+  color: rgb(172, 172, 172);
   font-family: 'Poppins', sans-serif;
-  font-size: 36px;
+  font-size: 20px;
   /* Set the font color to white */
 }
 
 .tagline-2 {
   font-family: 'Maven Pro', sans-serif ;
-  font-size: 92px;
-  line-height: 152px;
+  font-size: 55px;
+  line-height: 80px;
   font-weight: 900;
   color: white;
   text-align: center;

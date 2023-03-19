@@ -14,9 +14,9 @@ function Navbar() {
     }
 
     return (
-        <header>
+        <header style={{padding: '10px'}}>
             <Col xs={12} md={6} className="text-center">
-          <img src={LogoImage} alt="Van logo" />
+          <img src={LogoImage} alt="Van logo" /><span style={{marginLeft: '20px', fontFamily:'Maven pro',fontWeight:'700', color:'#cccaca', fontSize: '16px'}}>Frontend | Branding | IT support</span>
         </Col>
             <nav ref={navRef}>
                 <Link to="home" smooth={true} duration={500} onClick={() => showNavbar()}><a href="#home">Home</a></Link>
