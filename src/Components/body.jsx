@@ -7,6 +7,7 @@ import { FiSettings } from 'react-icons/fi';
 import { BsGlobe2 } from 'react-icons/bs';
 import HeroSection from "./HeroSection";
 import Porfolio from "./Portfolio";
+import AboutPage from "./About";
 
 function Body() {
   const BodyRef = useRef();
@@ -91,7 +92,9 @@ function Body() {
           </Row>
         </Container>
       </section>
+      <AboutPage />
       <Porfolio />
+    
     </div>
 
   );

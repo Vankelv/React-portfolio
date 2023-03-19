@@ -26,7 +26,7 @@ const HeroSection = () => {
             {/* Subtext, Heading, and p text */}
             <div className="hero-text" >
               <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span></h3>
-              <h1 className="animate-charcter">Van Kelvin</h1>
+              <h1 className="animate-charcter">Dagbeneva</h1>
               <TexSlider />
               <div style={{ display: 'flex', alignItems: 'center', width: '500px', marginTop: '5%' }}>
                 <Button variant="outline-dark" className="btn-collab">
