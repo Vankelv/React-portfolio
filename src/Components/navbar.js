@@ -15,13 +15,13 @@ function Navbar() {
 
     return (
         <header>
-            <Col xs={12} md={4} className="text-center">
+            <Col xs={12} md={6} className="text-center">
           <img src={LogoImage} alt="Van logo" />
         </Col>
             <nav ref={navRef}>
-                <Link to="home" smooth={true} duration={500} onClick={() => showNavbar()}>Home</Link>
-                <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}>My work</Link>
-                <Link to="about" smooth={true} duration={500} onClick={() => showNavbar()}>About</Link>
+                <Link to="home" smooth={true} duration={500} onClick={() => showNavbar()}><a href="#home">Home</a></Link>
+                <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}><a href="#portfolio">My work</a></Link>
+                <Link to="about" smooth={true} duration={500} onClick={() => showNavbar()}><a href="#about">About</a></Link>
                 <button className="nav-contact" ><a href="/#">Contact me</a></button>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes />
