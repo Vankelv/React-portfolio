@@ -49,13 +49,13 @@ const HeroSection = () => {
           </Col>
         </Row>
       </section>
-      <Modal show={showModal} onHide={handleClose} size="lg">
+      <Modal show={showModal} onHide={handleClose}  size="lg" fullscreen>
         <Modal.Header closeButton>
           <Modal.Title>Contact Us</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="modal-social">
               <h4>Get in Touch</h4>
               <p>Connect with us on social media:</p>
               <div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
                 </a>
               </div>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="contact-form">
               <h4>Contact Form</h4>
               <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formBasicName">
