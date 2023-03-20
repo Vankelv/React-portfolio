@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import '../styles/main.css';
 
 const TextSlider = () => {
   const [index, setIndex] = useState(0);
@@ -23,7 +24,7 @@ const TextSlider = () => {
   }, [index, texts.length]);
 
   return (
-    <animated.h4 style={{ color: 'white', ...spring }}>
+    <animated.h4 className="animate" style={{ color: 'white', ...spring }}>
       {texts[index]}
     </animated.h4>
   );

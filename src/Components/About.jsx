@@ -30,7 +30,7 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <div className="about-page">
+    <div className="about-page" id='about'>
       <Container style={{ marginBottom: '8%' }}>
         <Row>
           <Col md={4}>
@@ -79,7 +79,7 @@ const AboutPage = () => {
                     </button>
                   </a>
                   <Link to="contact" smooth={true} duration={500}>
-                    <button className="btn about">Contact Me</button>
+                    <button className="btn about contact">Contact Me</button>
                   </Link>
                 </div>
                 </div>

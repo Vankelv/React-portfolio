@@ -140,6 +140,14 @@ header .nav-btn {
 .items-list {
   margin-left: 18%;
 }
+.portfolio-h{
+  font-family: 'Maven Pro', sans-serif ;
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+}
 a{
   color: #fac760;
 }
@@ -198,10 +206,10 @@ a:hover{
   }
 }
 /* portfolio */
-.tagline-2-p{
+/* .tagline-2-p{
   width: 40%;
   margin: 0 auto;
-}
+} */
 
 
 /* About css */
@@ -273,6 +281,39 @@ a:hover{
   .about-buttons {
     flex-direction: column;
     align-items: center;
+  }
+  #what-i-do{
+    margin-top: 25%;
+  }
+  .animate{
+    margin-top: 10%;
+  }
+  .col-sm-12.services.col-lg-4{
+    margin-top: 5%;
+  }
+  .about.text-white{
+    border: none !important;
+    border-radius: 0px !important;
+  }
+
+  h4{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  p{
+    font-size: 18px;
+  }
+  .tagline-2 {
+    font-family: 'Maven Pro', sans-serif ;
+    margin-bottom: 5%;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+  }
+  .centered-text{
+    font-size: 18px;
   }
 
   .about-buttons button {

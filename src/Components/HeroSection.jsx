@@ -10,10 +10,10 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const HeroSection = () => {
 
   return (
-    <div>
+    <div id="hero">
       <section style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
         <Row >
-          <Col xs={12} md={6} >
+          <Col lg={6} md={6} >
             <img
               src={vanImage}
               alt="Van"
@@ -21,13 +21,12 @@ const HeroSection = () => {
               style={{ width: '80%', height: 'auto' }}
             />
           </Col>
-          <Col xs={12} md={6} className="d-flex justify-content-center">
-            {/* Subtext, Heading, and p text */}
+          <Col lg={6} md={6} className="d-flex justify-content-center">
             <div className="hero-text" >
               <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span></h3>
-              <h1 className="animate-charcter">Dagbeneva</h1>
+              <h1 className="animate-charcter">Van Kelvin</h1>
               <TexSlider />
-              <div style={{ display: 'flex', alignItems: 'center', width: '500px', marginTop: '5%' }}>
+              <div className="hero-btn">
                 <Button variant="outline-dark" className="btn-collab">
                   Let's work together. <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px' }} />
                 </Button>
