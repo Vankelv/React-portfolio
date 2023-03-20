@@ -282,6 +282,20 @@ a:hover{
     flex-direction: column;
     align-items: center;
   }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
   #what-i-do{
     margin-top: 25%;
   }
