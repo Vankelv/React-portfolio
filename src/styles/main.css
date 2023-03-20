@@ -285,6 +285,12 @@ a:hover{
   #what-i-do{
     margin-top: 25%;
   }
+  .footer{
+    padding: 0px;
+  }
+  .items-list{
+    margin-left: 0px;
+  }
   .animate{
     margin-top: 10%;
   }
