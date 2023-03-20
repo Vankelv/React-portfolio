@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/main.css";
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from "react";
+import {Container, Row, Col,} from 'react-bootstrap';
 import { TiBrush } from 'react-icons/ti';
 import { FiSettings } from 'react-icons/fi';
 import { BsGlobe2 } from 'react-icons/bs';
@@ -95,7 +96,6 @@ function Body() {
       </section>
       <AboutPage />
       <Porfolio />
-
     </div>
 
   );
