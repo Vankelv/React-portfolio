@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import LogoImage from '../images/Logo.png';
-
+import '../styles/main.css';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -15,30 +15,30 @@ const Footer = () => {
        borderRadius: '10px', 
        boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)', 
        }}>
-        <Col xs={12} md={4} className="text-center">
+        <Col xs={12}  className=" col-sm-4 text-center">
           <img src={LogoImage} alt="Van logo" />
         </Col>
-        <Col xs={12} md={4} className="text-center">
+        <Col xs={12} className=" col-sm-4 text-center">
           <p>
             Call/WhatsApp:
             {' '}
             <a href="tel:+233202950603">+233202950603</a>
           </p>
         </Col>
-        <Col xs={12} md={4} className="text-center">
+        <Col xs={12}  className=" col-sm-4 text-center">
           <p>
             Email:
             {' '}
             <a href="mailto:Vankelvin603@gmail.com">Vankelvin603@gmail.com</a>
           </p>
-          <div className="social-media-links">
+          <span className="social-media-links">
             <a href="https://www.linkedin.com/your-linkedin-url" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin fa-lg"></i>
             </a>
             <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-lg"></i>
             </a>
-          </div>
+          </span>
         </Col>
       </Row>
       <div className="text-center" style={{ padding: '10px',color:'white', marginTop: '20px' }}>
