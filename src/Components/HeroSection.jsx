@@ -19,8 +19,6 @@ const HeroSection = () => {
     e.preventDefault();
     // handle form submission logic here
   };
-
-
   return (
     <div id="hero">
       <section style={{ padding: '5%', height: '5%', marginTop: '2%' }}>

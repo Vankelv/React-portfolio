@@ -8,7 +8,6 @@
 
 
 }
-
 :root {
   --mainColor: #000000;
   --mainColorLight: #52619b;
@@ -278,6 +277,7 @@ a:hover{
 }
 
 @media (max-width: 767px) {
+ 
   .about-buttons {
     flex-direction: column;
     align-items: center;
