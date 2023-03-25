@@ -25,7 +25,7 @@ function Body() {
             <Col lg={4} className="col-sm-12">
               <div className="card  text-white rounded">
                 <div className="card-body">
-                  <div className="d-flex justify-content-center align-items-center">
+                  <div className="d-flex  ">
                     <BsGlobe2 size={90}
                       style={{
                         color: '#FF097F',
@@ -44,32 +44,34 @@ function Body() {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="col-sm-12 services">
-              <div className="card  text-white rounded">
-                <div className="card-body">
-                  <div className="d-flex justify-content-center align-items-center">
-                    <TiBrush size={90}
-                      style={{
-                        color: '#7BD388',
-                        backgroundColor: '#1C2C1F',
-                        borderRadius: '50%',
-                        padding: '20px'
-                      }} />
-                  </div>
-                  <h1 className="card-title"> Branding</h1>
-                  <ul className="items-list">
-                    <li>Logo design</li>
-                    <li>Business card design</li>
-                    <li>Creative social media posts</li>
-                    <li>Brand guidelines</li>
-                  </ul>
-                </div>
-              </div>
-            </Col>
+           <Col lg={4} className="col-sm-12 services">
+  <div className="card text-white rounded">
+    <div className="card-body">
+      <div className="d-flex   text-left">
+        <div className="mobile-align-left"> <TiBrush size={90}
+          style={{
+            color: '#7BD388',
+            backgroundColor: '#1C2C1F',
+            borderRadius: '50%',
+            padding: '20px'
+          }} />
+          </div>
+      </div>
+      <h1 className="card-title"> Branding</h1>
+      <ul className="items-list">
+        <li>Logo design</li>
+        <li>Business card design</li>
+        <li>Creative social media posts</li>
+        <li>Brand guidelines</li>
+      </ul>
+    </div>
+  </div>
+</Col>
+
             <Col lg={4} className="col-sm-12 services">
               <div className="card text-white rounded">
                 <div className="card-body">
-                  <div className="d-flex justify-content-center align-items-center">
+                  <div className="d-flex  ">
 
                     <FiSettings size={90}
                       style={{
