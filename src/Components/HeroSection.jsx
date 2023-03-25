@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../styles/HeroSection.css";
 import vanImage from "../images/van.png";
 import TexSlider from "./TextSlider.js";
-import { Modal, Container, Row, Col, Button,Form } from 'react-bootstrap';
+import { Modal, Card, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaEnvelopeOpen,  FaInstagram, FaTimes, FaLinkedin,  FaWhatsapp } from "react-icons/fa";
 
 
 const HeroSection = () => {
@@ -47,47 +47,66 @@ const HeroSection = () => {
           </Col>
         </Row>
       </section>
-      <Modal show={showModal} onHide={handleClose}  size="lg" fullscreen>
-        <Modal.Header closeButton>
-          <Modal.Title>Contact Us</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Row>
-            <Col xs={12} md={6} className="modal-social">
-              <h4>Get in Touch</h4>
-              <p>Connect with us on social media:</p>
-              <div>
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                  <FaFacebook size={32} />
-                </a>
+      <Modal show={showModal} onHide={handleClose} size="lg" fullscreen>
+  <Modal.Header >
+    <Button variant="link" onClick={handleClose} className="text-white">
+      <span aria-hidden="true">&times;</span>
+    </Button>
+  </Modal.Header>
+  <Modal.Body>
+    <Row className="modal-contents">
+      <h1 className="form-header">Lets get started <br />with your project</h1>
+      <Col xs={12} md={6} >
+        <div className="justify-content-center">
+          <Card className="bouncing-card">
+            <Card.Body>
+              <Card.Title className="gradient-text">
+              <h1>Get in Touch</h1>
+              </Card.Title>
+              <p className="no-gradient">What's next?
+                Kindly fill in the required fields below to progress to the next page.
+              </p>
+              Connect with me via social media
+              <div className="d-flex justify-content-center">
                 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-                  <FaLinkedin size={32} />
+                  <FaLinkedin className="social-icon" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <FaInstagram className="social-icon" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <FaWhatsapp className="social-icon" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <FaEnvelopeOpen className="social-icon" />
                 </a>
               </div>
-            </Col>
-            <Col xs={12} md={6} className="contact-form">
-              <h4>Contact Form</h4>
-              <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="formBasicName">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter name" required />
-                </Form.Group>
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" required />
-                </Form.Group>
-                <Form.Group controlId="formBasicMessage">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="Enter message" required />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Submit
-                </Button>
-              </Form>
-            </Col>
-          </Row>
-        </Modal.Body>
-      </Modal>
+            </Card.Body>
+          </Card>
+        </div>
+      </Col>
+      <Col xs={12} md={6} className="contact-form text-white">
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="form-group" controlId="formBasicName">
+            {/* <Form.Label>Name</Form.Label> */}
+            <Form.Control type="text" placeholder="Enter name" required />
+          </Form.Group>
+          <Form.Group className="form-group" controlId="formBasicEmail">
+            {/* <Form.Label>Email</Form.Label> */}
+            <Form.Control type="email" placeholder="Enter email" required />
+          </Form.Group>
+          <Form.Group className="form-group" controlId="formBasicMessage">
+            {/* <Form.Label>Message</Form.Label> */}
+            <Form.Control as="textarea" rows={3} placeholder="Enter message" required />
+          </Form.Group>
+          <Button variant="outline-dark" className="btn-collab btn-send" type="submit">
+            send<FontAwesomeIcon icon={faArrowRight} />
+          </Button>
+        </Form>
+      </Col>
+    </Row>
+  </Modal.Body>
+</Modal>
     </div>
 
   );

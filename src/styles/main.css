@@ -275,8 +275,24 @@ a:hover{
 .about-buttons button {
   margin: 10px;
 }
+.close-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
 
 @media (max-width: 767px) {
+
+
+  .nav-btn {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+  }
  
   .about-buttons {
     flex-direction: column;

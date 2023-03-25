@@ -149,3 +149,126 @@ h2 {
     font-size: 2em;
   }
 }
+
+/* Modal */
+.modal-fullscreen .modal-content{
+  background-color: black;
+}
+.modal-contents{
+ padding: 0% 11%;
+}
+.contact-form{
+  background-color: #101012;
+  border-radius: 10px;
+  padding: 5%;
+}
+.form-group{
+  margin-bottom: 8%;
+}
+/* form{
+  padding: 8%;
+  color: white;
+} */
+.btn-send{
+  width: 50%;
+ 
+}
+.form-header {
+  background: linear-gradient(90deg,#ff097f 12.91%,#ef6d35 27.84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Maven pro', sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+}
+
+
+ /* bouncing card */
+
+ .bouncing-card {
+  margin-top: 10%;
+  color: white;
+  animation: bounce 1s infinite;
+  background-color: #101012;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 10px auto; */
+  max-width: 400px;
+  padding: 20px 30px 20px 30px;
+ 
+}
+
+.gradient-text {
+  background: linear-gradient(69deg,#ff097f 17.91%,#ef6d35 97.84%);
+  font-family: 'Maven pro', sans-serif;
+  font-size: 30px !important;
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-icon {
+  color: #d66d04;
+  font-size: 24px;
+  
+  margin: 20px 10px;
+}
+
+.social-icon:hover {
+  color: #ff0062;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.text-white.btn.btn-link{
+  position: absolute;
+  top: 20;
+  right: 0;
+  margin-right: 10%;
+  background: linear-gradient(90deg,#ff097f 10.91%,#ef6d35 90.84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  text-decoration: none;
+  font-weight: 900;
+}
+ .modal-header{
+  border: none;
+ }
+.no-gradient{
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Maven pro', sans-serif;
+  line-height: 30px;
+}
+@media screen and (max-width: 768px) {
+  .form-header {
+    background: linear-gradient(90deg,#ff097f 10.91%,#ef6d35 90.84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Maven pro', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .text-white.btn.btn-link{
+    background: linear-gradient(90deg,#ff097f 10.91%,#ef6d35 90.84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Maven pro', sans-serif;
+    font-weight: 900;
+    font-size: 90px;
+  }
+  .bouncing-card{
+    padding: 5px;
+  }
+}
