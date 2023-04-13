@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/HeroSection.css";
 import vanImage from "../images/van.png";
 import TexSlider from "./TextSlider.js";
@@ -6,6 +6,8 @@ import { Modal, Card, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FaEnvelopeOpen,  FaInstagram, FaTimes, FaLinkedin,  FaWhatsapp } from "react-icons/fa";
+
+import emailjs from '@emailjs/browser';
 
 
 const HeroSection = () => {
@@ -15,9 +17,21 @@ const HeroSection = () => {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
-  const handleSubmit = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    // handle form submission logic here
+
+    emailjs.sendForm(
+      'service_32w61qe', 
+      'template_kfdmijg', 
+      form.current, '7hGO1Bdpy1h5tn1dD')
+      .then((result) => {
+          console.log(result.text);
+          console.log("Message sent")
+      }, (error) => {
+          console.log(error.text);
+      });
   };
   return (
     <div id="hero">
@@ -86,18 +100,18 @@ const HeroSection = () => {
         </div>
       </Col>
       <Col xs={12} md={6} className="contact-form text-white">
-        <Form onSubmit={handleSubmit}>
+        <Form ref={form} onSubmit={sendEmail}>
           <Form.Group className="form-group" controlId="formBasicName">
             {/* <Form.Label>Name</Form.Label> */}
-            <Form.Control type="text" placeholder="Enter name" required />
+            <Form.Control type="text" placeholder="Enter name"  name="user_name" required />
           </Form.Group>
           <Form.Group className="form-group" controlId="formBasicEmail">
             {/* <Form.Label>Email</Form.Label> */}
-            <Form.Control type="email" placeholder="Enter email" required />
+            <Form.Control type="email" placeholder="Enter email" name="user_email" required />
           </Form.Group>
           <Form.Group className="form-group" controlId="formBasicMessage">
             {/* <Form.Label>Message</Form.Label> */}
-            <Form.Control as="textarea" rows={3} placeholder="Enter message" required />
+            <Form.Control as="textarea" rows={3} placeholder="Enter message" name="message" required />
           </Form.Group>
           <Button variant="outline-dark" className="btn-collab btn-send" type="submit">
             send<FontAwesomeIcon icon={faArrowRight} />

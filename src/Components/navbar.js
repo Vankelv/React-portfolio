@@ -20,7 +20,7 @@ function Navbar() {
         </Col>
             <nav ref={navRef}>
                 <Link to="hero" smooth={true} duration={500} onClick={() => showNavbar()}><a href="#home">Home</a></Link>
-                <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}><a href="#portfolio">My work</a></Link>
+                <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}><a href="#portfolio">My works</a></Link>
                 <Link to="about" smooth={true} duration={500} onClick={() => showNavbar()}><a href="#about">About</a></Link>
                 <div className="close-btn" onClick={() => showNavbar()}>
     <FaTimes />
