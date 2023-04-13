@@ -78,9 +78,10 @@ const AboutPage = () => {
                       <FaDownload /> Download My CV
                     </button>
                   </a>
-                  <Link to="contact" smooth={true} duration={500}>
-                    <button className="btn about contact">Contact Me</button>
-                  </Link>
+                  <a href="mailto:Vankelvin603@gmail.com">
+                  <button className="btn about contact">Contact Me</button>
+                  </a>
+                
                 </div>
                 </div>
               </div>
