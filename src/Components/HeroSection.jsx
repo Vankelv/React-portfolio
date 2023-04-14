@@ -6,8 +6,13 @@ import { Modal, Card, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FaEnvelopeOpen,  FaInstagram, FaTimes, FaLinkedin,  FaWhatsapp } from "react-icons/fa";
-
 import emailjs from '@emailjs/browser';
+
+const Result =() =>{
+return(
+  <p>Your message has been sent successfully. I will contact you asap</p>
+)
+}
 
 
 const HeroSection = () => {
@@ -16,6 +21,7 @@ const HeroSection = () => {
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
+  const [result, showResult] = useState(false);
 
   const form = useRef();
 
@@ -32,7 +38,12 @@ const HeroSection = () => {
       }, (error) => {
           console.log(error.text);
       });
+      e.target.reset();
+      showResult(true);
   };
+  setTimeout(() =>{
+    showResult(false)
+  }, 4000)
   return (
     <div id="hero">
       <section style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
@@ -109,6 +120,7 @@ const HeroSection = () => {
             {/* <Form.Label>Email</Form.Label> */}
             <Form.Control type="email" placeholder="Enter email" name="user_email" required />
           </Form.Group>
+        
           <Form.Group className="form-group" controlId="formBasicMessage">
             {/* <Form.Label>Message</Form.Label> */}
             <Form.Control as="textarea" rows={3} placeholder="Enter message" name="message" required />
@@ -116,6 +128,8 @@ const HeroSection = () => {
           <Button variant="outline-dark" className="btn-collab btn-send" type="submit">
             send<FontAwesomeIcon icon={faArrowRight} />
           </Button>
+          <div className="row" style={{marginTop: 30}}>{
+            result ? <Result /> : null}</div>
         </Form>
       </Col>
     </Row>

@@ -70,19 +70,21 @@ const AboutPage = () => {
                     <div className="skill-progress" style={{ '--progress-width': '91%' }}>
                       <span className="skill-percent">95%</span>
                     </div>
-                </div>
+                  </div>
 
-                <div className="about-buttons">
-                  <a href="/path/to/your/cv" download>
-                    <button className="btn about">
-                      <FaDownload /> Download My CV
-                    </button>
-                  </a>
-                  <a href="mailto:Vankelvin603@gmail.com">
-                  <button className="btn about contact">Contact Me</button>
-                  </a>
-                
-                </div>
+                  <div className="about-buttons">
+                    <a href={process.env.PUBLIC_URL + '/pdf/Kelvin.pdf'} download>
+                      <button className="btn about">
+                        <FaDownload /> Download My CV
+                      </button>
+                    </a>
+
+
+                    <a href="mailto:Vankelvin603@gmail.com">
+                      <button className="btn about contact">Contact Me</button>
+                    </a>
+
+                  </div>
                 </div>
               </div>
             </div>
