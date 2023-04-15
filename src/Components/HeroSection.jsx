@@ -61,7 +61,7 @@ const HeroSection = () => {
     <div id="hero">
       <section id="hero" ref={ref} style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
       <animated.div style={heroSpring}>
-      <Row >
+      <Row className="justify-content-center" >
           {/* <Col lg={6} md={6} >
             <img
               src={vanImage}
