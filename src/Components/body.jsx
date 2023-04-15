@@ -16,7 +16,7 @@ function Body() {
   const BodyRef = useRef();
   //animation
   const [ref, inView] = useInView({
-    threshold: 0.7, // When 50% of the section is visible
+    threshold: 0.3, // When 50% of the section is visible
     triggerOnce: true, // Only trigger animation once
   });
   const heroSpring = useSpring({
@@ -26,8 +26,6 @@ function Body() {
   });
   return (
     <div>
-
-      <HeroSection />
       <section id="what-i-do">
         <Container ref={ref} style={{ marginBottom: '8%' }}>
           <animated.div style={heroSpring}>

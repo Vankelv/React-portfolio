@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from 'react-scroll';
 import { Row, Col } from 'react-bootstrap';
 import LogoImage from '../images/Logo.png';
-import About from "./About";
 import "../styles/main.css"
 
 function Navbar() {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/navbar";
 import Body from "./Components/body";
+import HeroSection from "./Components/HeroSection";
 import Footer from "./Components/Footer";
 import Preloader from "./Components/Preloader";
 
@@ -19,6 +20,7 @@ function App() {
       {!loading && (
         <React.Fragment>
           <Navbar />
+          <HeroSection />
           <Body />
           <Footer />
         </React.Fragment>

@@ -24,7 +24,7 @@ const HeroSection = () => {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
   const [result, showResult] = useState(false);
-//email
+  //email
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -56,37 +56,38 @@ const HeroSection = () => {
     transform: inView ? 'translateY(0)' : 'translateY(100px)',
     config: { duration: 1000 },
   });
-  
-  return (
-    <div id="hero">
-      <section id="hero" ref={ref} style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
-      <animated.div style={heroSpring}>
-      <Row className="justify-content-center" >
-          <Col lg={4} >
-            <img
-              src={vanImage}
-              alt="Van"
-              className="img-fluid"
-              style={{ height: 'auto' }}
-            />
-          </Col> 
-          <Col lg={4} className="d-flex justify-content-center">
-            <div className="hero-text" >
-              <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span></h3>
-              <h1 className="animate-charcter">Van Kelvin</h1>
-              <TexSlider />
-              <div className="hero-btn">
-                <Button variant="outline-dark" className="btn-collab" onClick={handleShow}>
-                  Let's work together. <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px' }} />
-                </Button>
-                <span style={{ marginLeft: '10px', color: 'white', fontFamily: 'Maven Pro', display: 'flex', alignItems: 'center', textAlign: 'center', height: '100%' }}>Breaking with Convention</span>
-              </div>
 
-            </div>
-          </Col>
-        </Row>
-  </animated.div>
-      
+  return (
+    <div id="hero" style={{overflowX:'hidden'}}>
+      <section id="hero" ref={ref} style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
+        <animated.div style={heroSpring}>
+          <Row className="justify-content-center" >
+            <Col lg={4} >
+              <img
+                src={vanImage}
+                alt="Van"
+                className="img-fluid"
+                style={{ height: 'auto' }}
+              />
+            </Col>
+            <Col lg={4} className="d-flex justify-content-center">
+              <div className="hero-text" >
+                <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span></h3>
+                <h1 className="animate-charcter">Van Kelvin</h1>
+                <TexSlider />
+                <div className="hero-btn" style={{ display: 'flex', alignItems: 'center' }}>
+                  <Button variant="outline-dark" className="btn-collab" onClick={handleShow} style={{ marginRight: '10px' }}>
+                    Let's work together. <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px' }} />
+                  </Button>
+                  <span style={{ color: 'white', fontFamily: 'Maven Pro' }}>Breaking with Convention</span>
+                </div>
+
+
+              </div>
+            </Col>
+          </Row>
+        </animated.div>
+
       </section>
       <Modal show={showModal} onHide={handleClose} size="lg" fullscreen>
         <Modal.Header >
