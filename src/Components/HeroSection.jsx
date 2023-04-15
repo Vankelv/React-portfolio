@@ -62,15 +62,15 @@ const HeroSection = () => {
       <section id="hero" ref={ref} style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
       <animated.div style={heroSpring}>
       <Row className="justify-content-center" >
-          {/* <Col lg={6} md={6} >
+          <Col lg={4} >
             <img
               src={vanImage}
               alt="Van"
               className="img-fluid"
-              style={{ width: '80%', height: 'auto' }}
+              style={{ height: 'auto' }}
             />
-          </Col> */}
-          <Col lg={6} md={6} className="d-flex justify-content-center">
+          </Col> 
+          <Col lg={4} className="d-flex justify-content-center">
             <div className="hero-text" >
               <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span></h3>
               <h1 className="animate-charcter">Van Kelvin</h1>
