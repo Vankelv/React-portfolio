@@ -6,10 +6,27 @@ import queensImage from "../images/queens.webp";
 import daImage from "../images/da.webp";
 import skincareImage from "../images/skincare.webp";
 import adgImage from "../images/adg.webp";
+import { useSpring, animated } from 'react-spring';
+import { useInView } from 'react-intersection-observer';
+
 const Portfolio = () => {
+
+//animation
+const [ref, inView] = useInView({
+  threshold: 0.3, // When 50% of the section is visible
+  triggerOnce: true, // Only trigger animation once
+});
+const heroSpring = useSpring({
+  opacity: inView ? 1 : 0,
+  transform: inView ? 'translateY(0)' : 'translateY(100px)',
+  config: { duration: 1000 },
+});
+
   return (
-    <section id="portfolio">
-      <Container>
+    <section ref={ref} id="portfolio">
+  
+      <Container ref={ref}>
+      <animated.div style={heroSpring}>
         <Row className="justify-content-center">
           <h1 className="portfolio-h">Portfolio </h1>
           <span className="centered-text">
@@ -113,12 +130,13 @@ const Portfolio = () => {
           </Col>
           <Button
             variant="light"
-            href="https://nextlinegh.com" target="blank" 
+            href="https://nextlinegh.com/works" target="blank" 
             style={{ background: "none", border: "none", color: "white", textDecoration: "Underline", boxShadow: "none", marginBottom: 77 }}
           >
             View All Projects <FontAwesomeIcon icon={faExternalLinkAlt} style={{marginLeft: '10px'}} />
           </Button>
         </Row>
+        </animated.div>
       </Container>
     </section>
   );

@@ -9,16 +9,28 @@ import { BsGlobe2 } from 'react-icons/bs';
 import HeroSection from "./HeroSection";
 import Porfolio from "./Portfolio";
 import AboutPage from "./About";
+import { useSpring, animated } from 'react-spring';
+import { useInView } from 'react-intersection-observer';
 
 function Body() {
   const BodyRef = useRef();
-
+  //animation
+  const [ref, inView] = useInView({
+    threshold: 0.7, // When 50% of the section is visible
+    triggerOnce: true, // Only trigger animation once
+  });
+  const heroSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(100px)',
+    config: { duration: 1000 },
+  });
   return (
     <div>
 
       <HeroSection />
       <section id="what-i-do">
-        <Container style={{ marginBottom: '8%' }}>
+        <Container ref={ref} style={{ marginBottom: '8%' }}>
+          <animated.div style={heroSpring}>
           <Row>
             <span className="centered-text">Helping You Create a Strong Digital Presence, from Branding to IT Support</span>
             <h1 className="tagline-2">Boosting Your Online Presence</h1>
@@ -94,6 +106,8 @@ function Body() {
               </div>
             </Col>
           </Row>
+          </animated.div>
+         
         </Container>
       </section>
       <AboutPage />

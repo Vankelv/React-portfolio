@@ -2,11 +2,26 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import LogoImage from '../images/Logo.png';
 import '../styles/main.css';
+import { useSpring, animated } from 'react-spring';
+import { useInView } from 'react-intersection-observer';
+
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const [ref, inView] = useInView({
+    threshold: 0.3, // When 50% of the section is visible
+    triggerOnce: true, // Only trigger animation once
+  });
+  const heroSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(100px)',
+    config: { duration: 1000 },
+  });
   
   return (
-    <div className="footer" style={{padding: '20px' }}>
+    <div className="footer" ref={ref} style={{padding: '20px' }}>
+      <animated.div style={heroSpring}>
       <Row className="mx-auto text-white align-items-center" 
       style={{ height:'200px',
        marginBottom: 0, 
@@ -44,6 +59,7 @@ const Footer = () => {
       <div className="text-center" style={{ padding: '10px',color:'white', marginTop: '20px' }}>
         &copy; {currentYear} <a href='https://nextlinegh.com'>Nextline Gh.</a>  All rights reserved.
       </div>
+      </animated.div>
     </div>
   );
 };

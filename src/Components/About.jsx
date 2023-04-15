@@ -3,6 +3,8 @@ import { FaDownload } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import "../styles/main.css";
 import { Container, Row, Col } from 'react-bootstrap';
+import { useSpring, animated } from 'react-spring';
+import { useInView } from 'react-intersection-observer';
 
 const AboutPage = () => {
   useEffect(() => {
@@ -28,10 +30,21 @@ const AboutPage = () => {
       window.removeEventListener('scroll', checkScroll);
     };
   }, []);
+   //animation
+   const [ref, inView] = useInView({
+    threshold: 0.7, // When 50% of the section is visible
+    triggerOnce: true, // Only trigger animation once
+  });
+  const heroSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(100px)',
+    config: { duration: 1000 },
+  });
 
   return (
     <div className="about-page" id='about'>
-      <Container style={{ marginBottom: '8%' }}>
+        <Container ref={ref} style={{ marginBottom: '8%' }}>
+      <animated.div style={heroSpring}>
         <Row>
           <Col md={4}>
             <div className="about text-white">
@@ -90,7 +103,9 @@ const AboutPage = () => {
             </div>
           </Col>
         </Row>
+      </animated.div>
       </Container>
+      
     </div>
   );
 };
