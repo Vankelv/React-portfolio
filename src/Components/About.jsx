@@ -91,8 +91,6 @@ const AboutPage = () => {
                         <FaDownload /> Download My CV
                       </button>
                     </a>
-
-
                     <a href="mailto:Vankelvin603@gmail.com">
                       <button className="btn about contact">Contact Me</button>
                     </a>

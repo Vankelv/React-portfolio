@@ -19,12 +19,12 @@ const TextSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index + 1) % texts.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [index, texts.length]);
 
   return (
-    <animated.h4 className="animate" style={{ color: 'white', ...spring }}>
+    <animated.h4 className="animate" style={{ textAlign: 'center', color: 'white', ...spring }}>
       {texts[index]}
     </animated.h4>
   );
