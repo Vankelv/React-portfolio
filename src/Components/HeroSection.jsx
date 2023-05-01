@@ -72,8 +72,9 @@ const HeroSection = () => {
             </Col> */}
             <Col lg={8} className="d-flex justify-content-center">
               <div className="hero-text justify-content-center" >
-                <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span></h3>
-                <h1 className="animate-charcter">Van Kelvin</h1>
+                <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span> </h3>
+                <h3 className="sub-text"  style={{ color: "#01BE96" }}>Kelvin Klutse <span style={{ color: "#FB2D55" }}> or</span></h3>
+                <h1 className="animate-charcter">Dagbe neva</h1>
                 <TexSlider />
                 <div className="hero-btn" style={{ display: 'flex', alignItems: 'center' }}>
                   <Button variant="outline-dark" className="btn-collab" onClick={handleShow} style={{ marginRight: '10px' }}>
