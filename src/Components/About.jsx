@@ -1,59 +1,69 @@
-import React, { useEffect } from 'react';
-import { FaDownload } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import React, { useEffect } from "react";
+import { FaDownload } from "react-icons/fa";
+import { Link } from "react-scroll";
 import "../styles/main.css";
-import { Container, Row, Col } from 'react-bootstrap';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
+import { Container, Row, Col } from "react-bootstrap";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 
 const AboutPage = () => {
   useEffect(() => {
-    const skillBars = document.querySelectorAll('.skill-bar');
+    const skillBars = document.querySelectorAll(".skill-bar");
 
     const checkScroll = () => {
-      skillBars.forEach(skillBar => {
+      skillBars.forEach((skillBar) => {
         const barTop = skillBar.getBoundingClientRect().top;
         const barBottom = skillBar.getBoundingClientRect().bottom;
         const barHeight = skillBar.getBoundingClientRect().height;
 
         if (barTop < window.innerHeight - barHeight / 2 && barBottom > 0) {
-          skillBar.classList.add('animate');
+          skillBar.classList.add("animate");
         } else {
-          skillBar.classList.remove('animate');
+          skillBar.classList.remove("animate");
         }
       });
     };
 
-    window.addEventListener('scroll', checkScroll);
+    window.addEventListener("scroll", checkScroll);
 
     return () => {
-      window.removeEventListener('scroll', checkScroll);
+      window.removeEventListener("scroll", checkScroll);
     };
   }, []);
-   //animation
-   const [ref, inView] = useInView({
+  //animation
+  const [ref, inView] = useInView({
     threshold: 0.7, // When 50% of the section is visible
     triggerOnce: true, // Only trigger animation once
   });
   const heroSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateY(0)' : 'translateY(100px)',
+    transform: inView ? "translateY(0)" : "translateY(100px)",
     config: { duration: 1000 },
   });
 
   return (
-    <div className="about-page" id='about'>
-        <Container ref={ref} style={{ marginBottom: '8%' }}>
-      <animated.div style={heroSpring}>
-        <Row>
-          <Col md={4}>
-            <div className="about text-white">
-              <div className="justify-content-center card-body" style={{ padding: '5%' }}>
-                <h2>About Me</h2>
-                <p>
-                  Hi, I'm a frontend developer with expertise in HTML, CSS, JavaScript, and React JS. I'm also a brand identity designer and IT helpdesk support with over 3 years of experience in these roles.
-                </p>
-                <div className="skill-item">
+    <div className="about-page" id="about">
+      <Container ref={ref} style={{ marginBottom: "8%" }}>
+        <animated.div style={heroSpring}>
+          <Row>
+            <Col md={4}>
+              <div className="about text-white">
+                <div
+                  className="justify-content-center card-body"
+                  style={{ padding: "5%" }}
+                >
+                  <h2>About Me</h2>
+                  <p>
+                    Hi, I'm a frontend developer skilled in HTML, CSS,
+                    JavaScript, and React JS, with a strong background in brand
+                    identity design. With over three years of experience, I've
+                    also served as a Chief Information Security Officer CISO,
+                    leading successful ISO certifications and implementing
+                    Information Security Management Systems ISMS. From creating
+                    dynamic web applications to designing brand identities, my
+                    portfolio showcases a comprehensive skill set.
+                  </p>
+                  {/* <div className="skill-item">
                   <span className="skill-title">WordPress</span>
                   <div className="skill-bar">
                     <div className="skill-progress" style={{ '--progress-width': '91%' }}>
@@ -85,8 +95,12 @@ const AboutPage = () => {
                     </div>
                   </div>
 
+                
+                </div> */}
                   <div className="about-buttons">
-                    <a href={process.env.PUBLIC_URL + '/pdf/Kelvin.pdf'} download>
+                    <a
+                      href="https://drive.google.com/file/d/1ez8zo6uRlPoGWk-GOuqRQeU-_aDDUIp3/view?usp=sharing"
+                    >
                       <button className="btn about">
                         <FaDownload /> Download My CV
                       </button>
@@ -94,16 +108,13 @@ const AboutPage = () => {
                     <a href="mailto:Vankelvin603@gmail.com">
                       <button className="btn about contact">Contact Me</button>
                     </a>
-
                   </div>
                 </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </animated.div>
+            </Col>
+          </Row>
+        </animated.div>
       </Container>
-      
     </div>
   );
 };
