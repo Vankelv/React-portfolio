@@ -51,10 +51,10 @@ function Body() {
                     </div>
                     <h1 className="card-title">Website Dev</h1>
                     <ul className="items-list">
-                      <li>Custom website design</li>
-                      <li>Responsive design</li>
+                      <li>Full-stack MERN development</li>
+                      <li>Custom e-commerce solutions</li>
                       <li>Website development</li>
-                      <li>Website maintenance</li>
+                      <li>Website maintenance and optimization</li>
                     </ul>
                   </div>
                 </div>
@@ -78,10 +78,9 @@ function Body() {
                     </div>
                     <h1 className="card-title"> Branding</h1>
                     <ul className="items-list">
-                      <li>Logo design</li>
-                      <li>Business card design</li>
-                      <li>Creative social media posts</li>
-                      <li>Brand guidelines</li>
+                      <li>Professional logo design</li>
+                      <li>Professional logo design</li>
+                      <li>Comprehensive brand guidelines</li>
                     </ul>
                   </div>
                 </div>
@@ -97,21 +96,15 @@ function Body() {
                           color: "#7979F1",
                           backgroundColor: "#252543",
                           borderRadius: "50%",
-                          padding: "20px",
                           padding: "25px",
                         }}
                       />
                     </div>
                     <h1 className="card-title"> IT Support</h1>
                     <ul className="items-list">
-                      <li>Computer troubleshooting</li>
-                      <li>Software installation</li>
+                      <li>ISO 27001 Information Security Management</li>
                       <li>Network setup and configuration</li>
                       <li>Data backup and recovery</li>
-                      <li>
-                        Implementation and management of Information Security
-                        Management System (ISMS)
-                      </li>
                     </ul>
                   </div>
                 </div>

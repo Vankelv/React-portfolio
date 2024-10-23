@@ -54,53 +54,15 @@ const AboutPage = () => {
                 >
                   <h2>About Me</h2>
                   <p>
-                    Hi, I'm a frontend developer skilled in HTML, CSS,
-                    JavaScript, and React JS, with a strong background in brand
-                    identity design. With over three years of experience, I've
-                    also served as a Chief Information Security Officer CISO,
-                    leading successful ISO certifications and implementing
-                    Information Security Management Systems ISMS. From creating
-                    dynamic web applications to designing brand identities, my
-                    portfolio showcases a comprehensive skill set.
+                    With over three years of experience in full-stack
+                    development using the MERN stack and brand identity design,
+                    I bring a holistic approach to digital solutions. I have
+                    also led successful ISO certification projects, ensuring
+                    secure and compliant systems for businesses.
                   </p>
-                  {/* <div className="skill-item">
-                  <span className="skill-title">WordPress</span>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ '--progress-width': '91%' }}>
-                      <span className="skill-percent">91%</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <span className="skill-title">HTML and CSS</span>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ '--progress-width': '80%' }}>
-                      <span className="skill-percent">80%</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <span className="skill-title">React/JS</span>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ '--progress-width': '55%' }}>
-                      <span className="skill-percent">55%</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <span className="skill-title">Brand Identity Designs</span>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ '--progress-width': '91%' }}>
-                      <span className="skill-percent">95%</span>
-                    </div>
-                  </div>
 
-                
-                </div> */}
                   <div className="about-buttons">
-                    <a
-                      href="https://drive.google.com/file/d/1ez8zo6uRlPoGWk-GOuqRQeU-_aDDUIp3/view?usp=sharing"
-                    >
+                    <a href="https://drive.google.com/file/d/1ez8zo6uRlPoGWk-GOuqRQeU-_aDDUIp3/view?usp=sharing">
                       <button className="btn about">
                         <FaDownload /> Download My CV
                       </button>

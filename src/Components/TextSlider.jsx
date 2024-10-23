@@ -5,11 +5,10 @@ import '../styles/main.css';
 const TextSlider = () => {
   const [index, setIndex] = useState(0);
   const texts = [
-    'I craft stunning websites with flawless functionality.',
-    'I design striking brand identities with lasting impression.',
-    'I offer expert IT support for smooth system performance.'
-  ];
-
+    'I build powerful web applications using the MERN stack.',
+    'I design professional logos and compelling brand identities.',
+    'I implement ISO-compliant security systems for businesses.'
+  ];  
   const spring = useSpring({
     from: { transform: 'translate3d(0, 100%, 0)', opacity: 0 },
     to: { transform: 'translate3d(0, 0%, 0)', opacity: 1 },

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/HeroSection.css";
 import vanImage from "../images/van.png";
-import TexSlider from "./TextSlider.js";
+import TexSlider from "./TextSlider.jsx";
 import { Modal, Card, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
