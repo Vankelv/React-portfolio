@@ -2,15 +2,16 @@ import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/main.css";
 import React, { useState } from "react";
+import { FaCode } from "react-icons/fa6";
 import { Container, Row, Col } from "react-bootstrap";
 import { TiBrush } from "react-icons/ti";
 import { FiSettings } from "react-icons/fi";
-import { BsGlobe2 } from "react-icons/bs";
 import HeroSection from "./HeroSection";
 import Porfolio from "./Portfolio";
 import AboutPage from "./About";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
+import Logofolio from "./LogoFolio";
 
 function Body() {
   const BodyRef = useRef();
@@ -39,7 +40,7 @@ function Body() {
                 <div className="card  text-white rounded">
                   <div className="card-body">
                     <div className="d-flex  ">
-                      <BsGlobe2
+                      <FaCode
                         size={90}
                         style={{
                           color: "#FF097F",
@@ -49,13 +50,7 @@ function Body() {
                         }}
                       />
                     </div>
-                    <h1 className="card-title">Website Dev</h1>
-                    <ul className="items-list">
-                      <li>Full-stack MERN development</li>
-                      <li>Custom e-commerce solutions</li>
-                      <li>Website development</li>
-                      <li>Website maintenance and optimization</li>
-                    </ul>
+                    <h3 className="card-title">Software Development</h3>
                   </div>
                 </div>
               </Col>
@@ -64,7 +59,6 @@ function Body() {
                   <div className="card-body">
                     <div className="d-flex   text-left">
                       <div className="mobile-align-left">
-                        {" "}
                         <TiBrush
                           size={90}
                           style={{
@@ -76,12 +70,7 @@ function Body() {
                         />
                       </div>
                     </div>
-                    <h1 className="card-title"> Branding</h1>
-                    <ul className="items-list">
-                      <li>Professional logo design</li>
-                      <li>Professional logo design</li>
-                      <li>Comprehensive brand guidelines</li>
-                    </ul>
+                    <h3 className="card-title"> Corporate Branding</h3>
                   </div>
                 </div>
               </Col>
@@ -100,12 +89,7 @@ function Body() {
                         }}
                       />
                     </div>
-                    <h1 className="card-title"> IT Support</h1>
-                    <ul className="items-list">
-                      <li>ISO 27001 Information Security Management</li>
-                      <li>Network setup and configuration</li>
-                      <li>Data backup and recovery</li>
-                    </ul>
+                    <h3 className="card-title"> IT Support</h3>
                   </div>
                 </div>
               </Col>
@@ -113,7 +97,11 @@ function Body() {
           </animated.div>
         </Container>
       </section>
+     
       <AboutPage />
+      <div className="lg:mx-auto mx-10">
+      <Logofolio />
+      </div>
       <Porfolio />
     </div>
   );

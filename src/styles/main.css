@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Ubuntu:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   /* font-family: 'Poppins', sans-serif; */
-
-
 }
 :root {
   --mainColor: #000000;
@@ -15,7 +20,6 @@
   --textColor: #ffffff;
   --bodyColor: rgb(36, 35, 35);
   cursor: url(../images/icons8-cursor-48.cur), auto;
-
 }
 
 header {
@@ -39,22 +43,17 @@ header.sticky {
   color: rgb(255, 255, 255);
   width: 100%;
   z-index: 999;
-  background: linear-gradient(-225deg,
-      #231557 20%,
-      #ff1361 67%,
-      #ef6d35 100%);
+  background: linear-gradient(-225deg, #231557 20%, #ff1361 67%, #ef6d35 100%);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-
 
 nav a {
   margin: 0 10px;
   color: var(--textColor);
   text-decoration: none;
-  font-family: 'Maven pro', sans-serif;
+  font-family: "Maven pro", sans-serif;
   font-size: 20px;
   font-weight: 600;
-
 }
 
 nav {
@@ -90,7 +89,7 @@ header .nav-btn {
   border-radius: 5px;
   color: var(--textColor);
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .nav-contact a:hover {
@@ -114,16 +113,16 @@ header .nav-btn {
   /* Set the background color to black */
 }
 
-.centered-text{
+.centered-text {
   text-align: center;
   color: rgb(172, 172, 172);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   /* Set the font color to white */
 }
 
 .tagline-2 {
-  font-family: 'Maven Pro', sans-serif ;
+  font-family: "Maven Pro", sans-serif;
   margin-bottom: 5%;
   font-size: 55px;
   line-height: 80px;
@@ -131,29 +130,31 @@ header .nav-btn {
   color: white;
   text-align: center;
 }
-.card-body{
+.card-body {
   padding: 20px 40px;
-  font-family: 'Popins', sans-serif;
+  font-family: "Popins", sans-serif;
   font-size: 17px;
   letter-spacing: 1px;
   line-height: 40px;
 }
-.card-title{
+.card-title {
   margin-top: 30px;
 }
-
-.portfolio-h{
-  font-family: 'Maven Pro', sans-serif ;
+.logofo{
+  font-family: "Maven Pro", sans-serif;
+}
+.portfolio-h {
+  font-family: "Maven Pro", sans-serif;
   font-size: 55px;
   line-height: 80px;
   font-weight: 900;
   color: white;
   text-align: center;
 }
-a{
+a {
   color: #fac760;
 }
-a:hover{
+a:hover {
   color: #ff1361;
 }
 .card {
@@ -161,7 +162,6 @@ a:hover{
   background-color: rgba(22, 22, 22, 0.514);
   border-radius: 5px;
 }
-
 
 @media only screen and (max-width: 1024px) {
   header .nav-btn {
@@ -205,7 +205,6 @@ a:hover{
   margin: 0 auto;
 } */
 
-
 /* About css */
 .skill-bars {
   margin-bottom: 20px;
@@ -232,7 +231,6 @@ a:hover{
   border: solid 2px #f7c561;
   border-radius: 8px;
 }
-
 
 .skill-progress {
   position: absolute;
@@ -289,7 +287,7 @@ a:hover{
   .close-btn {
     display: block;
   }
- 
+
   .about-buttons {
     flex-direction: column;
     align-items: center;
@@ -308,33 +306,33 @@ a:hover{
     transition: 1s;
     transform: translateY(-100vh);
   }
-  #what-i-do{
+  #what-i-do {
     margin-top: 15%;
   }
-  .footer{
+  .footer {
     padding: 0px;
   }
-  
-  .animate{
+
+  .animate {
     margin-top: 10%;
   }
-  .col-sm-12.services.col-lg-4{
+  .col-sm-12.services.col-lg-4 {
     margin-top: 5%;
   }
-  .about.text-white{
+  .about.text-white {
     border: none !important;
     border-radius: 0px !important;
   }
 
-  h4{
+  h4 {
     font-size: 16px;
     font-weight: 600;
   }
-  p{
+  p {
     font-size: 18px;
   }
   .tagline-2 {
-    font-family: 'Maven Pro', sans-serif ;
+    font-family: "Maven Pro", sans-serif;
     margin-bottom: 5%;
     font-size: 20px;
     line-height: 40px;
@@ -342,7 +340,7 @@ a:hover{
     color: white;
     text-align: center;
   }
-  .centered-text{
+  .centered-text {
     font-size: 18px;
   }
 
@@ -350,28 +348,62 @@ a:hover{
     margin: 5px 0;
   }
 }
-p{
-  font-family: 'Poppins', 'Ubuntu', sans-serif;
+p {
+  font-family: "Poppins", "Ubuntu", sans-serif;
 }
-.about.text-white{
-  background-color: #0B0B0B;
+.about.text-white {
+  background-color: #0b0b0b;
 
   border-radius: 57px;
 }
-.btn.about{
+.btn.about {
   color: #fff;
   font-size: 18px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   padding: 10px;
   border: 1.5px solid #b6b4b4;
   border-radius: 8px;
 }
-.btn.about:hover{
-  background-color: #e9e5e5 ;
+.btn.about:hover {
+  background-color: #e9e5e5;
   color: #161515;
   font-size: 18px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   padding: 10px;
   border: none;
   border-radius: 8px;
 }
+
+/* Ensure the marquee stops when hovered */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Marquee Content */
+.marquee-content {
+  display: flex;
+  gap: 46px;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+/* Keyframes for Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Image Filter: Convert to White */
+.logo-img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  max-height: 100px;
+}
+
+
+

@@ -5,6 +5,7 @@ import HeroSection from "./Components/HeroSection";
 import Footer from "./Components/Footer";
 import Preloader from "./Components/Preloader";
 
+
 function App() {
   const [loading, setLoading] = useState(true); // Add a state variable to keep track of loading status
 

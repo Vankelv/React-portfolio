@@ -28,15 +28,31 @@ function Navbar() {
         </span>
       </Col>
       <nav ref={navRef}>
-        <Link to="hero" smooth={true} duration={500} onClick={() => showNavbar()}>
+        <Link
+          to="hero"
+          smooth={true}
+          duration={500}
+          onClick={() => showNavbar()}
+        >
           <div>Home</div>
         </Link>
-        <Link to="portfolio" smooth={true} duration={400} onClick={() => showNavbar()}>
-          <div>My works</div>
-        </Link>
-        <Link to="about" smooth={true} duration={500} onClick={() => showNavbar()}>
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
+          onClick={() => showNavbar()}
+        >
           <div>About</div>
         </Link>
+        <Link
+          to="portfolio"
+          smooth={true}
+          duration={400}
+          onClick={() => showNavbar()}
+        >
+          <div>My works</div>
+        </Link>
+
         <div className="close-btn" onClick={() => showNavbar()}>
           <FaTimes />
         </div>
