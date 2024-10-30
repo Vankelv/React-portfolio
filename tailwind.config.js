@@ -14,7 +14,7 @@ export default {
       },
       // Custom font families
       fontFamily: {
-        varela: ['"Varela Round"', "sans-serif"],
+        Maven: ["Maven Pro", "sans-serif"],
         poppins: ['"Poppins"', "sans-serif"],
       },
       // Custom animations

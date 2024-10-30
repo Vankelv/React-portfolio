@@ -19,7 +19,7 @@ class Preloader extends React.Component {
             </svg>
           </div>
           <div className="preloader__content">
-            <div className="preloader__name">Van</div>
+            <div className="text-base">Dagbeneva</div>
             <div className="preloader__dots">
               <div className="preloader__dot"></div>
               <div className="preloader__dot"></div>

@@ -62,14 +62,7 @@ const HeroSection = () => {
       <section id="hero" ref={ref} style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
         <animated.div style={heroSpring}>
           <Row className="justify-content-center" >
-            {/* <Col lg={4} >
-              <img
-                src={vanImage}
-                alt="Van"
-                className="img-fluid"
-                style={{ height: 'auto' }}
-              />
-            </Col> */}
+          
             <Col lg={8} className="d-flex justify-content-center">
               <div className="hero-text justify-content-center" >
                 <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span> </h3>
@@ -92,7 +85,7 @@ const HeroSection = () => {
       </section>
       <Modal show={showModal} onHide={handleClose} size="lg" fullscreen>
         <Modal.Header >
-          <Button variant="link" onClick={handleClose} className="text-white">
+          <Button variant="link" onClick={handleClose} className="text-white ">
             <span aria-hidden="true">&times;</span>
           </Button>
         </Modal.Header>

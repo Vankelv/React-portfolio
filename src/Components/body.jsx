@@ -1,12 +1,10 @@
 import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/main.css";
 import React, { useState } from "react";
 import { FaCode } from "react-icons/fa6";
 import { Container, Row, Col } from "react-bootstrap";
 import { TiBrush } from "react-icons/ti";
 import { FiSettings } from "react-icons/fi";
-import HeroSection from "./HeroSection";
 import Porfolio from "./Portfolio";
 import AboutPage from "./About";
 import { useSpring, animated } from "react-spring";
@@ -27,80 +25,64 @@ function Body() {
   });
   return (
     <div>
-      <section id="what-i-do">
-        <Container ref={ref} style={{ marginBottom: "8%" }}>
+      <section id="services" className="py-16 lg:max-w-[99rem] mx-auto">
+        <div ref={ref} className="mx-auto px-0">
           <animated.div style={heroSpring}>
-            <Row>
-              <span className="centered-text">
-                Helping You Create a Strong Digital Presence, from Branding to
-                IT Support
+            <div className="flex flex-col text-white items-center p-6">
+              <span className="text-center text-lg mb-2">
+                Helping You Create a Strong Digital Presence, from custom
+                software and web development to Branding and IT Support
               </span>
-              <h1 className="tagline-2">Boosting Your Online Presence</h1>
-              <Col lg={4} className="col-sm-12">
-                <div className="card  text-white rounded">
-                  <div className="card-body">
-                    <div className="d-flex  ">
-                      <FaCode
-                        size={90}
-                        style={{
-                          color: "#FF097F",
-                          backgroundColor: "#361C29",
-                          borderRadius: "50%",
-                          padding: "20px",
-                        }}
-                      />
-                    </div>
-                    <h3 className="card-title">Software Development</h3>
-                  </div>
-                </div>
-              </Col>
-              <Col lg={4} className="col-sm-12 services">
-                <div className="card text-white rounded">
-                  <div className="card-body">
-                    <div className="d-flex   text-left">
-                      <div className="mobile-align-left">
-                        <TiBrush
-                          size={90}
-                          style={{
-                            color: "#7BD388",
-                            backgroundColor: "#1C2C1F",
-                            borderRadius: "50%",
-                            padding: "20px",
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <h3 className="card-title"> Corporate Branding</h3>
-                  </div>
-                </div>
-              </Col>
+              <h1 className="text-3xl font-bold text-center mb-8">
+                Boosting Your Online Presence
+              </h1>
 
-              <Col lg={4} className="col-sm-12 services">
-                <div className="card text-white rounded">
-                  <div className="card-body">
-                    <div className="d-flex  ">
-                      <FiSettings
-                        size={90}
-                        style={{
-                          color: "#7979F1",
-                          backgroundColor: "#252543",
-                          borderRadius: "50%",
-                          padding: "25px",
-                        }}
-                      />
-                    </div>
-                    <h3 className="card-title"> IT Support</h3>
+              <div className="flex flex-col lg:flex-row lg:justify-between gap-6 w-full">
+                {/* Card 1: Software Development */}
+                <div className="flex flex-row items-center bg-[#1E1E2C] text-white rounded-lg shadow-md p-4 lg:w-1/3">
+                  <FaCode
+                    size={90}
+                    className="text-[#FF097F] bg-[#361C29] p-6 rounded-full"
+                  />
+                  <div className="ml-4">
+                    <h3 className="text-xl font-semibold">
+                      Software Development
+                    </h3>
                   </div>
                 </div>
-              </Col>
-            </Row>
+
+                {/* Card 2: Corporate Branding */}
+                <div className="flex flex-row items-center bg-[#1E1E2C] text-white rounded-lg shadow-md p-4 lg:w-1/3">
+                  <TiBrush
+                    size={90}
+                    className="text-[#7BD388] bg-[#1C2C1F] p-6 rounded-full"
+                  />
+                  <div className="ml-4">
+                    <h3 className="text-xl font-semibold">
+                      Corporate Branding
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Card 3: IT Support */}
+                <div className="flex flex-row items-center bg-[#1E1E2C] text-white rounded-lg shadow-md p-4 lg:w-1/3">
+                  <FiSettings
+                    size={90}
+                    className="text-[#7979F1] bg-[#252543] p-6 rounded-full"
+                  />
+                  <div className="ml-4">
+                    <h3 className="text-xl font-semibold">IT Support</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
           </animated.div>
-        </Container>
+        </div>
       </section>
-     
+
       <AboutPage />
-      <div className="lg:mx-auto mx-10">
-      <Logofolio />
+      <div className="">
+        <Logofolio />
       </div>
       <Porfolio />
     </div>

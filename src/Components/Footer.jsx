@@ -1,10 +1,9 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import LogoImage from '../images/Logo.png';
-import '../styles/main.css';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
-
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import LogoImage from "../images/Logo.png";
+import "../styles/main.css";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,50 +14,71 @@ const Footer = () => {
   });
   const heroSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateY(0)' : 'translateY(100px)',
+    transform: inView ? "translateY(0)" : "translateY(100px)",
     config: { duration: 1000 },
   });
-  
+
   return (
-    <div className="footer" ref={ref} style={{padding: '20px' }}>
+    <div ref={ref} className="footer p-5">
       <animated.div style={heroSpring}>
-      <Row className="mx-auto text-white align-items-center" 
-      style={{ height:'200px',
-       marginBottom: 0, 
-       backgroundColor: '#101012', 
-       width:'70%', 
-       borderRadius: '10px', 
-       boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)', 
-       }}>
-        <Col xs={12}  className=" col-sm-4 text-center">
-          <img src={LogoImage} alt="Van logo" />
-        </Col>
-        <Col xs={12} className=" col-sm-4 text-center">
-          <p>
-            Call/WhatsApp:
-            {' '}
-            <a href="tel:+233202950603">+233202950603</a>
-          </p>
-        </Col>
-        <Col xs={12}  className=" col-sm-4 text-center">
-          <p>
-            Email:
-            {' '}
-            <a href="mailto:Vankelvin603@gmail.com">Vankelvin603@gmail.com</a>
-          </p>
-          <span className="social-media-links">
-            <a href="https://www.linkedin.com/your-linkedin-url" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin fa-lg"></i>
+        <div className="mx-auto text-white flex flex-wrap items-center justify-center bg-[#101012] h-52 lg:w-4/5 rounded-lg shadow-md">
+          <div className="w-full sm:w-1/3 text-center mb-4 sm:mb-0">
+            <img src={LogoImage} alt="Van logo" className="mx-auto" />
+          </div>
+          <div className="w-full sm:w-1/3 text-center mb-4 sm:mb-0">
+            <p>
+              Call/WhatsApp:
+              <a
+                href="tel:+233202950603"
+                className="text-orange-600 hover:underline"
+              >
+                +233202950603
+              </a>
+            </p>
+          </div>
+          <div className="w-full sm:w-1/3 text-center">
+            <p>
+              Email:
+              <a
+                href="mailto:Vankelvin603@gmail.com"
+                className="text-orange-600  hover:underline"
+              >
+                Vankelvin603@gmail.com
+              </a>
+            </p>
+            <div className="flex justify-center gap-4 mt-2">
+              <a
+                href="https://www.linkedin.com/your-linkedin-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-orange-600"
+              >
+                <i className="fab fa-linkedin fa-lg"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/your-instagram-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-pink-500"
+              >
+                <i className="fab fa-instagram fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="text-center flex items-center justify-center gap-2 text-white mt-5">
+          <p >
+            <span className="px-2"> &copy; {new Date().getFullYear()}</span>
+           
+            <a
+              href="https://vinetrix.com"
+              className="text-orange-600  hover:underline"
+            >
+              vinetrix.
             </a>
-            <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram fa-lg"></i>
-            </a>
-          </span>
-        </Col>
-      </Row>
-      <div className="text-center" style={{ padding: '10px',color:'white', marginTop: '20px' }}>
-        &copy; {currentYear} <a href='https://nextlinegh.com'>Nextline Gh.</a>  All rights reserved.
-      </div>
+          </p>
+          <p> All rights reserved.</p>
+        </div>
       </animated.div>
     </div>
   );
