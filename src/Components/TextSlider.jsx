@@ -23,7 +23,7 @@ const TextSlider = () => {
   }, [index, texts.length]);
 
   return (
-    <animated.h4 className="animate" style={{ textAlign: 'center', color: 'white', ...spring }}>
+    <animated.h4 className="animate" style={{ textAlign: 'left', color: 'white', ...spring }}>
       {texts[index]}
     </animated.h4>
   );

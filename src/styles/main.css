@@ -22,75 +22,11 @@
   cursor: url(../images/icons8-cursor-48.cur), auto;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 100;
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  background-color: var(--mainColor);
-  color: var(--textColor);
-}
-
-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  color: rgb(255, 255, 255);
-  width: 100%;
-  z-index: 999;
-  background: linear-gradient(-225deg, #231557 20%, #ff1361 67%, #ef6d35 100%);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-nav a {
-  margin: 0 10px;
-  color: var(--textColor);
-  text-decoration: none;
-  font-family: "Maven pro", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-nav {
-  display: flex;
-  border-radius: 15px;
-}
-
-nav a:hover {
-  color: var(--secondaryColor);
-}
-
 .portfolio {
   height: 50%;
   margin: 2% 0% 4% 0%;
 }
 
-header .nav-btn {
-  padding: 5px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--textColor);
-  visibility: hidden;
-  opacity: 0;
-  font-size: 1.8rem;
-}
-
-.nav-contact {
-  padding: 10px;
-  background: var(--bodyColor);
-  border: none;
-  border-radius: 5px;
-  color: var(--textColor);
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
 
 .nav-contact a:hover {
   color: var(--secondaryColor);
@@ -109,7 +45,7 @@ header .nav-btn {
   justify-content: center;
   align-items: center;
   /* height: 100vh; Adjust the height to match your needs */
-  background-color: black;
+
   /* Set the background color to black */
 }
 

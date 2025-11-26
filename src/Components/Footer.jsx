@@ -1,5 +1,4 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
 import LogoImage from "../images/Logo.png";
 import "../styles/main.css";
 import { useSpring, animated } from "react-spring";
@@ -67,9 +66,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center flex items-center justify-center gap-2 text-white mt-5">
-          <p >
+          <p>
             <span className="px-2"> &copy; {new Date().getFullYear()}</span>
-           
+
             <a
               href="https://vinetrix.com"
               className="text-orange-600  hover:underline"

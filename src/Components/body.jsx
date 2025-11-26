@@ -2,7 +2,6 @@ import { useRef } from "react";
 import "../styles/main.css";
 import React, { useState } from "react";
 import { FaCode } from "react-icons/fa6";
-import { Container, Row, Col } from "react-bootstrap";
 import { TiBrush } from "react-icons/ti";
 import { FiSettings } from "react-icons/fi";
 import Porfolio from "./Portfolio";
@@ -25,7 +24,7 @@ function Body() {
   });
   return (
     <div>
-      <section id="services" className="py-16 lg:max-w-[99rem] mx-auto">
+      <section id="services" className="py-16 max-w-7xl mx-auto">
         <div ref={ref} className="mx-auto px-0">
           <animated.div style={heroSpring}>
             <div className="flex flex-col text-white items-center p-6">

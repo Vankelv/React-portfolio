@@ -1,153 +1,101 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../styles/HeroSection.css";
-import vanImage from "../images/van.png";
 import TexSlider from "./TextSlider.jsx";
-import { Modal, Card, Row, Col, Button, Form } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FaEnvelopeOpen, FaInstagram, FaTimes, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import emailjs from '@emailjs/browser';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
+import heroImage from "../images/van.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
+import ContactModal from "./ContactModal";
+import "../styles/HeroSection.css";
 
-
-const Result = () => {
-  return (
-    <p>Your message has been sent successfully. I will contact you asap</p>
-  )
-}
+const heroBadges = ["MERN Stack", "Product Strategy", "Cloud DevOps"];
 
 const HeroSection = () => {
-  const [show, setShow] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-  const [result, showResult] = useState(false);
-  //email
-  const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      'service_32w61qe',
-      'template_kfdmijg',
-      form.current, '7hGO1Bdpy1h5tn1dD')
-      .then((result) => {
-        console.log(result.text);
-        console.log("Message sent")
-      }, (error) => {
-        console.log(error.text);
-      });
-    e.target.reset();
-    showResult(true);
-  };
-  setTimeout(() => {
-    showResult(false)
-  }, 4000)
-  //animation
   const [ref, inView] = useInView({
-    threshold: 0.5, // When 50% of the section is visible
-    triggerOnce: true, // Only trigger animation once
+    threshold: 0.4,
+    triggerOnce: true,
   });
+
   const heroSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateY(0)' : 'translateY(100px)',
-    config: { duration: 1000 },
+    transform: inView ? "translateY(0)" : "translateY(60px)",
+    config: { duration: 800 },
   });
 
   return (
-    <div id="hero" style={{overflowX:'hidden'}}>
-      <section id="hero" ref={ref} style={{ padding: '5%', height: '5%', marginTop: '2%' }}>
-        <animated.div style={heroSpring}>
-          <Row className="justify-content-center" >
-          
-            <Col lg={8} className="d-flex justify-content-center">
-              <div className="hero-text justify-content-center" >
-                <h3 className="sub-text">Hi there! <span style={{ color: "#01BE96" }}>I'm</span> </h3>
-                <h3 className="sub-text"  style={{ color: "#01BE96" }}>Kelvin Klutse <span style={{ color: "#FB2D55" }}> or</span></h3>
-                <h1 className="animate-charcter">Dagbe neva</h1>
-                <TexSlider />
-                <div className="hero-btn" style={{ display: 'flex', alignItems: 'center' }}>
-                  <Button variant="outline-dark" className="btn-collab" onClick={handleShow} style={{ marginRight: '10px' }}>
-                    Let's work together. <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px' }} />
-                  </Button>
-                  <span style={{ color: 'white', fontFamily: 'Maven Pro' }}>Breaking with Convention</span>
-                </div>
+    <section
+      id="hero"
+      className="relative  overflow-hidden bg-slate-950 py-16 sm:py-20"
+    >
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-20 top-20 h-64 w-64 rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-pink-500/10 blur-3xl" />
+        <div className="absolute bottom-0 right-10 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
+      </div>
 
+      <animated.div
+        ref={ref}
+        style={heroSpring}
+        className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+      >
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="space-y-6 text-center text-white lg:text-left">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-300">
+              Kelvin Vidzah · Creative Technologist
+            </p>
+            <h1 className="text-6xl font-extrabold leading-tight sm:text-5xl animate-charcter md:text-6xl">
+              Dagbe neva
+            </h1>
+            <TexSlider />
+            <p className="text-base text-left text-gray-300 sm:text-lg">
+              I help startups, SMEs, and enterprise teams launch
+              production-ready products that merge strong UI direction with
+              scalable engineering.
+            </p>
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
+              <button
+                onClick={handleShow}
+                className="flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:border-teal-400 hover:text-teal-200"
+              >
+                Let's work together
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+              <span className="text-xs tracking-[0.4em] text-gray-400">
+                Breaking with convention
+              </span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-200 lg:justify-start">
+              {heroBadges.map((badge) => (
+                <span
+                  key={badge}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1"
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
 
-              </div>
-            </Col>
-          </Row>
-        </animated.div>
+          <div className="relative flex justify-center">
+            <div className="relative h-72 w-72 rounded-[3rem] border border-white/10 bg-white/5 p-4 shadow-lg shadow-black/30 sm:h-80 sm:w-80">
+              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-orange-500/20 via-pink-500/20 to-purple-500/20 blur-2xl" />
+              <img
+                src={heroImage}
+                alt="Kelvin portrait"
+                className="relative z-10 h-full w-full rounded-[2.5rem] object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </animated.div>
 
-      </section>
-      <Modal show={showModal} onHide={handleClose} size="lg" fullscreen>
-        <Modal.Header >
-          <Button variant="link" onClick={handleClose} className="text-white ">
-            <span aria-hidden="true">&times;</span>
-          </Button>
-        </Modal.Header>
-        <Modal.Body>
-          <Row className="modal-contents">
-            <h1 className="form-header">Lets get started <br />with your project</h1>
-            <Col xs={12} md={6} >
-              <div className="justify-content-center">
-                <Card className="bouncing-card">
-                  <Card.Body>
-                    <Card.Title className="gradient-text">
-                      <h1>Get in Touch</h1>
-                    </Card.Title>
-                    <p className="no-gradient">What's next?
-                      Kindly fill in the required fields below to progress to the next page.
-                    </p>
-                    Connect with me via social media
-                    <div className="d-flex justify-content-center">
-                      <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-                        <FaLinkedin className="social-icon" />
-                      </a>
-                      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                        <FaInstagram className="social-icon" />
-                      </a>
-                      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                        <FaWhatsapp className="social-icon" />
-                      </a>
-                      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                        <FaEnvelopeOpen className="social-icon" />
-                      </a>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            </Col>
-            <Col xs={12} md={6} className="contact-form text-white">
-              <Form ref={form} onSubmit={sendEmail}>
-                <Form.Group className="form-group" controlId="formBasicName">
-                  {/* <Form.Label>Name</Form.Label> */}
-                  <Form.Control type="text" placeholder="Enter name" name="user_name" required />
-                </Form.Group>
-                <Form.Group className="form-group" controlId="formBasicEmail">
-                  {/* <Form.Label>Email</Form.Label> */}
-                  <Form.Control type="email" placeholder="Enter email" name="user_email" required />
-                </Form.Group>
-
-                <Form.Group className="form-group" controlId="formBasicMessage">
-                  {/* <Form.Label>Message</Form.Label> */}
-                  <Form.Control as="textarea" rows={3} placeholder="Enter message" name="message" required />
-                </Form.Group>
-                <Button variant="outline-dark" className="btn-collab btn-send" type="submit">
-                  send<FontAwesomeIcon icon={faArrowRight} />
-                </Button>
-                <div className="row" style={{ marginTop: 30 }}>{
-                  result ? <Result /> : null}</div>
-              </Form>
-            </Col>
-          </Row>
-        </Modal.Body>
-      </Modal>
-    </div>
-
+      <ContactModal open={showModal} onClose={handleClose} />
+    </section>
   );
 };
 
